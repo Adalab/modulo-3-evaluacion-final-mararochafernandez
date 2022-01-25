@@ -1,0 +1,18 @@
+@import 'core/variables';
+@import 'core/mixins';
+
+.character {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 680px;
+  }
+
+  //width: 170px;
+  &__item {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 5px;
+  }
+}

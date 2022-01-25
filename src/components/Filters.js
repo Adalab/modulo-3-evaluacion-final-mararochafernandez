@@ -1,3 +1,5 @@
+import '../styles/Filters.scss';
+
 const Filters = (props) => {
   const handleForm = (event) => {
     event.preventDefault();

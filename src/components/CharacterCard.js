@@ -1,19 +1,14 @@
+import '../styles/CharacterCard.scss';
 import { Link } from 'react-router-dom';
 import defaultImage from '../images/default-image.jpg';
 
 const CharacterCard = (props) => {
-  const translateSpecies = () => {
-    if (props.character.species === 'human') {
-      return 'humano';
-    }
-  };
-
   const image =
     props.character.image === '' ? defaultImage : props.character.image;
 
   return (
     <Link
-      to={`/character/:${props.id}`}
+      to={`/character/${props.id}`}
       className="character__link"
       title={props.character.name}
     >
@@ -25,7 +20,9 @@ const CharacterCard = (props) => {
         />
       </div>
       <p className="character__title">{props.character.name}</p>
-      <p className="character__text">{translateSpecies()}</p>
+      <p className="character__text">
+        {props.translate(props.character.species)}
+      </p>
     </Link>
   );
 };

@@ -1,0 +1,42 @@
+@import 'core/variables';
+@import 'core/mixins';
+
+.character {
+  &__link {
+    color: $color-black;
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  &__image {
+    width: 150px;
+  }
+
+  &__title {
+    width: 140px;
+    font-size: 1.6em;
+    line-height: 1.4em;
+    font-weight: bold;
+    margin: 5px;
+    word-spacing: 100vw;
+  }
+
+  &__text {
+    font-size: 1.4em;
+    line-height: 1.2em;
+    margin: 5px;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

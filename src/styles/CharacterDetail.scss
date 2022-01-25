@@ -1,0 +1,42 @@
+@import 'core/variables';
+@import 'core/mixins';
+
+.detail {
+  width: 400px;
+  margin: 5px auto;
+
+  &__link {
+    color: $color-white;
+    font-size: 1.6em;
+  }
+
+  &__image {
+    max-width: 200px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  &__subtitle {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  &__text,
+  &__list {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    font-size: inherit;
+    margin-bottom: 10px;
+  }
+}

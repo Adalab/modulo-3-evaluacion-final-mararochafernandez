@@ -30,34 +30,34 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 ## 4. Componentes del listado de personajes
 
-- [ ] Componente para el filtro del nombre (`Filters`).
-- [ ] Componente para el listado de personajes (`CharacterList`).
-- [ ] Componente para cada personaje del listado (`CharacterCard`).
-- [ ] Componente para el detalle de cada personaje (`CharacterDetail`).
+- [x] Componente para el filtro del nombre (`Filters`).
+- [x] Componente para el listado de personajes (`CharacterList`).
+- [x] Componente para cada personaje del listado (`CharacterCard`).
+- [x] Componente para el detalle de cada personaje (`CharacterDetail`).
 
 ## 5. Detalle del personaje
 
-- [ ] Información de cada personaje a pantalla completa: foto, nombre, casa, si está vivo o muerto, género, especie y nombres alternativos.
-- [ ] Usar rutas con `react-router-dom` (ocultar componente `CcharacterList` y mostrar componente `CharacterCard`).
+- [x] Información de cada personaje a **pantalla completa**: foto, nombre, casa, si está vivo o muerto, género, especie y nombres alternativos.
+- [x] Usar rutas con `react-router-dom` (ocultar componente `CharacterList` y mostrar componente `CharacterCard`).
 
 ## 6. Calidad
 
-- [ ] Usar etiqueta `<form />`
-- [ ] Evitar comportamiento por defecto del formulario.
-- [ ] Mostrar mensaje de aviso si no se obtienen resultados de búsqueda.
-- [ ] Filtrar independientemente de que se escriba en mayúsculas o minúsculas.
-- [ ] Mantener los resultados filtrados al volver del detalle del personaje.
+- [x] Usar etiqueta `<form />`
+- [x] Evitar comportamiento por defecto del formulario.
+- [x] Mostrar mensaje de aviso si no se obtienen resultados de búsqueda.
+- [x] Filtrar independientemente de que se escriba en mayúsculas o minúsculas.
+- [x] Mantener los resultados filtrados al volver del detalle del personaje.
 
 ## 7. Bonus: mejoras visuales
 
 - [ ] Mostrar icono de cada casa en el detalle del personaje.
-- [ ] Maquetar con algún sistema de `grid`.
+- [x] Maquetar con algún sistema de `grid`.
 - [ ] Adaptar a dispositivos pequeños.
 
 ## 8. Bonus: URL compartible
 
 - [ ] Ver el detalle del personaje a través de su URL.
-- [ ] Mostrar mensaje de error si la URL no existe.
+- [x] Mostrar mensaje de error si la URL no existe.
 
 ## 9. Bonus: ordenación
 
