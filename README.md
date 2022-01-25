@@ -14,9 +14,9 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 ## 1. Listado de personajes
 
-- [ ] Utilizar servicio de [hp-api.herokuapp.com](http://hp-api.herokuapp.com/) que devuelve información sobre los personajes de Harry Potter filtrados por casa a la que pertenecen.
-- [ ] Pintar información sobre los personajes: foto, nombre y especie.
-- [ ] Mostrar imagen por defecto si no existe.
+- [x] Utilizar servicio de [hp-api.herokuapp.com](http://hp-api.herokuapp.com/) que devuelve información de los personajes de Harry Potter filtrados por casa a la que pertenecen.
+- [x] Pintar información de los personajes: foto, nombre y especie.
+- [x] Mostrar imagen por defecto si no existe.
 
 ## 2. Filtrado de personajes
 
@@ -31,13 +31,13 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 ## 4. Componentes del listado de personajes
 
 - [ ] Componente para el filtro del nombre (`Filters`).
-- [ ] Componente para el listado de personajes (`CcharacterList`).
+- [ ] Componente para el listado de personajes (`CharacterList`).
 - [ ] Componente para cada personaje del listado (`CharacterCard`).
 - [ ] Componente para el detalle de cada personaje (`CharacterDetail`).
 
 ## 5. Detalle del personaje
 
-- [ ] Información sobre cada personaje a pantalla completa: foto, nombre, casa, si está vivo o muerto, género, especie y nombres alternativos.
+- [ ] Información de cada personaje a pantalla completa: foto, nombre, casa, si está vivo o muerto, género, especie y nombres alternativos.
 - [ ] Usar rutas con `react-router-dom` (ocultar componente `CcharacterList` y mostrar componente `CharacterCard`).
 
 ## 6. Calidad

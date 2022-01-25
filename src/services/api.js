@@ -1,7 +1,15 @@
-const callToApi = () => {
-  return fetch('URL')
+const getDataFromApi = () => {
+  return fetch('http://hp-api.herokuapp.com/api/characters/house/gryffindor')
     .then((response) => response.json())
-    .then((response) => response);
+    .then((characters) =>
+      characters.map((character) => {
+        return {
+          name: character.name,
+          image: character.image,
+          species: character.species,
+        };
+      })
+    );
 };
 
-export default callToApi;
+export default getDataFromApi;
