@@ -13,20 +13,23 @@ function App() {
 
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState('');
+  const [house, setHouse] = useState('gryffindor');
 
   // api
 
   useEffect(() => {
-    getDataFromApi().then((dataFromApi) => {
+    getDataFromApi(house).then((dataFromApi) => {
       setCharacters(dataFromApi);
     });
-  }, []);
+  }, [house]);
 
   // event handlers
 
   const handleInput = (data) => {
     if (data.key === 'name') {
       setName(data.value);
+    } else if (data.key === 'house') {
+      setHouse(data.value);
     }
   };
 
@@ -39,7 +42,7 @@ function App() {
     // HTML ✨
 
     <div className="page">
-      <Filters name={name} handleInput={handleInput} />
+      <Filters name={name} house={house} handleInput={handleInput} />
       <CharacterList characters={filteredCharacters} />
     </div>
   );

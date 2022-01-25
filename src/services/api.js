@@ -1,5 +1,5 @@
-const getDataFromApi = () => {
-  return fetch('http://hp-api.herokuapp.com/api/characters/house/gryffindor')
+const getDataFromApi = (house) => {
+  return fetch(`http://hp-api.herokuapp.com/api/characters/house/${house}`)
     .then((response) => response.json())
     .then((characters) =>
       characters.map((character) => {

@@ -5,7 +5,7 @@ const Filters = (props) => {
 
   const handleChange = (event) => {
     props.handleInput({
-      key: 'name',
+      key: event.currentTarget.id,
       value: event.currentTarget.value,
     });
   };
@@ -23,6 +23,24 @@ const Filters = (props) => {
           value={props.name}
           onChange={handleChange}
         />
+
+        <label className="filter__label" htmlFor="house">
+          Casa:
+        </label>
+        <select
+          className="filter__input"
+          name="house"
+          id="house"
+          value={props.house}
+          onChange={handleChange}
+        >
+          <option defaultValue value="gryffindor">
+            Gryffindor
+          </option>
+          <option value="slytherin">Slytherin</option>
+          <option value="ravenclaw">Ravenclaw</option>
+          <option value="hufflepuff">Hufflepuff</option>
+        </select>
       </form>
     </section>
   );

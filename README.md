@@ -25,8 +25,8 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 ## 3. Filtrado por casa
 
-- [ ] Buscar personajes por casa (casa por defecto: Gryffindor).
-- [ ] Escuchar y controlar `select`.
+- [x] Buscar personajes por casa (casa por defecto: Gryffindor).
+- [x] Escuchar y controlar `select`.
 
 ## 4. Componentes del listado de personajes
 
