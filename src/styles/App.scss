@@ -19,14 +19,39 @@ body {
 }
 
 .page {
+  display: flex;
+  justify-content: space-between;
   margin: 20px;
 }
 
+.filter {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    font-size: 1.4em;
+  }
+
+  &__label {
+    color: $color-white;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    font-size: inherit;
+    color: $color-white;
+    border: 1px solid #f5f5f5;
+    background-color: $color-black;
+    padding: 5px;
+  }
+}
+
+// 170px
 .character {
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    width: 680px;
   }
 
   &__item {

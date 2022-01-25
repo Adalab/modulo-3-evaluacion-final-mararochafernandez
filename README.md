@@ -20,8 +20,8 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 ## 2. Filtrado de personajes
 
-- [ ] Buscar personajes por nombre completo (en mayúsculas o minúsculas).
-- [ ] Escuchar y controlar `input`.
+- [x] Buscar personajes por nombre completo (en mayúsculas o minúsculas).
+- [x] Escuchar y controlar `input`.
 
 ## 3. Filtrado por casa
 

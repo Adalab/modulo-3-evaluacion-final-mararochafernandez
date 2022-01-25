@@ -2,17 +2,19 @@ import '../styles/App.scss';
 import { useEffect, useState } from 'react';
 import getDataFromApi from '../services/api';
 import CharacterList from './CharacterList';
+import Filters from './Filters';
 //import ls from '../services/localstorage';
 //import PropTypes from 'prop-types';
-
-//console.log();
 
 function App() {
   /* Let's do magic! 🦄🦄🦄 */
 
-  // api
+  // state
 
   const [characters, setCharacters] = useState([]);
+  const [name, setName] = useState('');
+
+  // api
 
   useEffect(() => {
     getDataFromApi().then((dataFromApi) => {
@@ -20,13 +22,25 @@ function App() {
     });
   }, []);
 
-  console.log(characters);
+  // event handlers
+
+  const handleInput = (data) => {
+    if (data.key === 'name') {
+      setName(data.value);
+    }
+  };
+
+  // render helpers
+  const filteredCharacters = characters.filter((character) =>
+    character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase())
+  );
 
   return (
     // HTML ✨
 
     <div className="page">
-      <CharacterList characters={characters} />
+      <Filters name={name} handleInput={handleInput} />
+      <CharacterList characters={filteredCharacters} />
     </div>
   );
 }

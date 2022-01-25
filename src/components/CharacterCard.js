@@ -7,7 +7,6 @@ const CharacterCard = (props) => {
       return 'humano';
     }
   };
-  console.log(props.character.image);
 
   const image =
     props.character.image === '' ? defaultImage : props.character.image;
