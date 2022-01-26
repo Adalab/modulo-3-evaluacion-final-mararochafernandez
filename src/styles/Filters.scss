@@ -21,5 +21,10 @@
     background-color: $color-black;
     padding: 5px;
     margin-bottom: 20px;
+
+    &--checkbox {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
   }
 }

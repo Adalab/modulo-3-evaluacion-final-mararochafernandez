@@ -65,7 +65,7 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 ## 10. Bonus: más filtros
 
-- [ ] Filtrar, por ejemplo, por género.
+- [x] Filtrar, por ejemplo, por género.
 
 ## 11. Bonus: botón reset
 

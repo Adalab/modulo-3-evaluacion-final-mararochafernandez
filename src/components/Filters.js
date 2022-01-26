@@ -20,12 +20,12 @@ const Filters = (props) => {
         </label>
         <input
           className="filter__input"
+          type="text"
           name="name"
           id="name"
           value={props.name}
           onChange={handleChange}
         />
-
         <label className="filter__label" htmlFor="house">
           Casa:
         </label>
@@ -43,6 +43,47 @@ const Filters = (props) => {
           <option value="ravenclaw">Ravenclaw</option>
           <option value="hufflepuff">Hufflepuff</option>
         </select>
+        <label className="filter__label" htmlFor="gender">
+          Género:
+        </label>
+        <select
+          className="filter__input"
+          name="gender"
+          id="gender"
+          value={props.gender}
+          onChange={handleChange}
+        >
+          <option defaultValue value="all">
+            Todos
+          </option>
+          <option value="female">Mujer</option>
+          <option value="male">Hombre</option>
+        </select>
+        {/*
+        <label className="filter__label">Género:</label>
+        <label className="filter__label">
+          <input
+            className="filter__input filter__input--checkbox"
+            type="checkbox"
+            name="female"
+            id="female"
+            value={props.name}
+            onChange={handleChange}
+          />
+          Mujer
+        </label>
+        <label className="filter__label">
+          <input
+            className="filter__input filter__input--checkbox"
+            type="checkbox"
+            name="male"
+            id="male"
+            value={props.name}
+            onChange={handleChange}
+          />
+          Hombre
+        </label>
+        */}
       </form>
     </section>
   );

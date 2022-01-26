@@ -16,6 +16,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState('');
   const [house, setHouse] = useState('gryffindor');
+  const [gender, setGender] = useState('all');
 
   // api
 
@@ -32,6 +33,9 @@ function App() {
       setName(data.value);
     } else if (data.key === 'house') {
       setHouse(data.value);
+    } else if (data.key === 'gender') {
+      console.log(data.value);
+      setGender(data.value);
     }
   };
 
@@ -42,6 +46,9 @@ function App() {
       character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase())
     )
     .filter((character) => character.house.toLocaleLowerCase() === house)
+    .filter((character) =>
+      gender === 'all' ? true : character.gender === gender
+    )
     .sort((a, b) => a.name.localeCompare(b.name));
 
   const translate = (text) => {
@@ -84,7 +91,12 @@ function App() {
         </Route>
 
         <Route path="/">
-          <Filters name={name} house={house} handleInput={handleInput} />
+          <Filters
+            name={name}
+            house={house}
+            gender={gender}
+            handleInput={handleInput}
+          />
 
           <CharacterList
             characters={filteredCharacters}
