@@ -3,13 +3,9 @@ import CharacterCard from './CharacterCard';
 
 const CharacterList = (props) => {
   const renderCharacterList = () =>
-    props.characters.map((character, index) => (
-      <li key={index} className="character__item">
-        <CharacterCard
-          id={(character.id = index)}
-          character={character}
-          translate={props.translate}
-        />
+    props.characters.map((character) => (
+      <li key={character.id} className="character__item">
+        <CharacterCard character={character} translate={props.translate} />
       </li>
     ));
 

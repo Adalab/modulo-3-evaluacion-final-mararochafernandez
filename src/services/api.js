@@ -1,9 +1,11 @@
-const getDataFromApi = (house) => {
-  return fetch(`http://hp-api.herokuapp.com/api/characters/house/${house}`)
+const getDataFromApi = () => {
+  //`http://hp-api.herokuapp.com/api/characters/house/${house}`
+  return fetch('http://hp-api.herokuapp.com/api/characters')
     .then((response) => response.json())
     .then((characters) =>
-      characters.map((character) => {
+      characters.map((character, index) => {
         return {
+          id: index,
           name: character.name,
           house: character.house,
           image: character.image,

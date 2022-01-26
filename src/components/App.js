@@ -20,10 +20,10 @@ function App() {
   // api
 
   useEffect(() => {
-    getDataFromApi(house).then((dataFromApi) => {
+    getDataFromApi().then((dataFromApi) => {
       setCharacters(dataFromApi);
     });
-  }, [house]);
+  }, []);
 
   // event handlers
 
@@ -37,9 +37,12 @@ function App() {
 
   // render helpers
 
-  const filteredCharacters = characters.filter((character) =>
-    character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase())
-  );
+  const filteredCharacters = characters
+    .filter((character) =>
+      character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase())
+    )
+    .filter((character) => character.house.toLocaleLowerCase() === house)
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   const translate = (text) => {
     if (text === 'female') {
@@ -64,10 +67,7 @@ function App() {
   const getRouteCharacter = () => {
     if (routeData !== null) {
       const routeId = parseInt(routeData.params.id);
-      const routeCharacter = filteredCharacters.find(
-        (character) => character.id === routeId
-      );
-      return routeCharacter || null;
+      return characters.find((character) => character.id === routeId);
     }
   };
 

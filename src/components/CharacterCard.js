@@ -8,7 +8,7 @@ const CharacterCard = (props) => {
 
   return (
     <Link
-      to={`/character/${props.id}`}
+      to={`/character/${props.character.id}`}
       className="character__link"
       title={props.character.name}
     >

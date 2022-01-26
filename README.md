@@ -56,12 +56,12 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 ## 8. Bonus: URL compartible
 
-- [ ] Ver el detalle del personaje a través de su URL.
+- [x] Ver el detalle del personaje a través de su URL.
 - [x] Mostrar mensaje de error si la URL no existe.
 
 ## 9. Bonus: ordenación
 
-- [ ] Ordenar listado de persponajes alfabéticamente.
+- [x] Ordenar listado de persponajes alfabéticamente.
 
 ## 10. Bonus: más filtros
 

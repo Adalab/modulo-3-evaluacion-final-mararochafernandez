@@ -5,7 +5,7 @@
   width: 400px;
   margin: 5px auto;
 
-  &__link {
+  &__button {
     color: $color-white;
     font-size: 1.6em;
   }
@@ -30,13 +30,19 @@
   }
 
   &__text,
-  &__list {
+  &__list,
+  &__item,
+  &__message {
     font-size: 1.6em;
     margin-bottom: 10px;
   }
 
   &__item {
     font-size: inherit;
-    margin-bottom: 10px;
+  }
+
+  &__message {
+    margin: 0 auto;
+    margin-top: 40px;
   }
 }
