@@ -15,26 +15,27 @@ function App() {
 
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState('');
-  const [house, setHouse] = useState('Gryffindor');
+  const [house, setHouse] = useState('gryffindor');
   const [gender, setGender] = useState('all');
+  console.log(house);
 
   // api
 
   useEffect(() => {
-    getDataFromApi().then((dataFromApi) => {
+    getDataFromApi(house).then((dataFromApi) => {
       setCharacters(dataFromApi);
     });
-  }, []);
+  }, [house]);
 
   // event handlers
 
   const handleInput = (data) => {
+    console.log(data.value);
     if (data.key === 'name') {
       setName(data.value);
     } else if (data.key === 'house') {
       setHouse(data.value);
     } else if (data.key === 'gender') {
-      console.log(data.value);
       setGender(data.value);
     }
   };
@@ -45,7 +46,6 @@ function App() {
     .filter((character) =>
       character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase())
     )
-    .filter((character) => character.house === house)
     .filter((character) =>
       gender === 'all' ? true : character.gender === gender
     )
@@ -69,21 +69,28 @@ function App() {
 
   // router
 
-  const routeData = useRouteMatch('/character/:id');
+  const routeData = useRouteMatch('/character/:house/:id');
 
   const getRouteCharacter = () => {
     if (routeData !== null) {
-      const routeId = parseInt(routeData.params.id);
-      return characters.find((character) => character.id === routeId);
+      const routeHouse = routeData.params.house;
+      console.log(routeHouse);
+      if (routeHouse !== house) {
+        setHouse(routeHouse);
+      } else {
+        const routeId = parseInt(routeData.params.id);
+        return characters.find((character) => character.id === routeId);
+      }
     }
   };
 
+  console.log(characters);
   return (
     // HTML ✨
 
     <div className="page">
       <Switch>
-        <Route path="/character/:id">
+        <Route path="/character/:house/:id">
           <CharacterDetail
             character={getRouteCharacter()}
             translate={translate}

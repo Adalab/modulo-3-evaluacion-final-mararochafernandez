@@ -2,12 +2,54 @@
 @import 'core/mixins';
 
 .detail {
-  width: 400px;
+  font-family: $font-second;
   margin: 5px auto;
+  display: flex;
+  flex-direction: column;
 
   &__button {
-    color: $color-white;
-    font-size: 1.6em;
+    font-family: $font-second;
+    font-size: 2em;
+    background-color: $color-dark;
+    border: none;
+    color: $color-card;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-size: 5em;
+    font-weight: bold;
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    color: #999;
+    border-bottom: 1px solid $color-card;
+    text-transform: uppercase;
+  }
+
+  &__shield {
+    width: 40px;
+    margin-right: 10px;
   }
 
   &__image {
@@ -15,28 +57,6 @@
     border-radius: 8px;
     margin-top: 10px;
     margin-bottom: 20px;
-  }
-
-  &__title {
-    font-size: 4em;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-
-  &__subtitle {
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    padding-bottom: 10px;
-    color: #666;
-    border-bottom: 1px solid #333;
-  }
-
-  &__shield {
-    width: 40px;
-    margin-right: 10px;
   }
 
   &__text,

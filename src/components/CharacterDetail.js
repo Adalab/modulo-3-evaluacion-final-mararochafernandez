@@ -1,5 +1,5 @@
 import '../styles/CharacterDetail.scss';
-import Gyffindor from '../images/gryffindor.svg';
+import Gryffindor from '../images/gryffindor.svg';
 import Slytherin from '../images/slytherin.svg';
 import Ravenclaw from '../images/ravenclaw.svg';
 import Hufflepuff from '../images/hufflepuff.svg';
@@ -23,8 +23,8 @@ const CharacterDetail = (props) => {
 
   const renderShield = (house) => {
     let shield = '';
-    if (house === 'Gyffindor') {
-      shield = Gyffindor;
+    if (house === 'Gryffindor') {
+      shield = Gryffindor;
     } else if (house === 'Slytherin') {
       shield = Slytherin;
     } else if (house === 'Ravenclaw') {
@@ -84,7 +84,7 @@ const CharacterDetail = (props) => {
   return (
     <section className="detail">
       <button className="detail__button" onClick={handleButton}>
-        Volver
+        <i className="detail__icon fas fa-long-arrow-alt-left"></i>Volver
       </button>
 
       {props.character === undefined

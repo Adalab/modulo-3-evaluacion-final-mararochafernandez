@@ -4,6 +4,15 @@
 
 .page {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: 20px;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  @include desktop {
+    width: 900px;
+  }
 }

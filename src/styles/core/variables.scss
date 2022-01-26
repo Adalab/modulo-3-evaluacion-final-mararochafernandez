@@ -1,2 +1,10 @@
-$color-black: #000;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+
+$font-first: 'Oswald', sans-serif;
+$font-second: 'Open Sans Condensed', sans-serif;
+
+$color-dark: #000;
 $color-white: #fff;
+$color-card: #e0d9d1;

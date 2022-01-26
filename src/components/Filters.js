@@ -30,22 +30,24 @@ const Filters = (props) => {
           Casa:
         </label>
         <select
-          className="filter__input"
+          className="filter__select"
           name="house"
           id="house"
           value={props.house}
           onChange={handleChange}
         >
-          <option defaultValue>Gryffindor</option>
-          <option>Slytherin</option>
-          <option>Ravenclaw</option>
-          <option>Hufflepuff</option>
+          <option defaultValue value="gryffindor">
+            Gryffindor
+          </option>
+          <option value="slytherin">Slytherin</option>
+          <option value="ravenclaw">Ravenclaw</option>
+          <option value="hufflepuff">Hufflepuff</option>
         </select>
         <label className="filter__label" htmlFor="gender">
           Género:
         </label>
         <select
-          className="filter__input"
+          className="filter__select"
           name="gender"
           id="gender"
           value={props.gender}

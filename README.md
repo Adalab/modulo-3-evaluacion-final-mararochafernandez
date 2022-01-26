@@ -50,7 +50,7 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 ## 7. Bonus: mejoras visuales
 
-- [ ] Mostrar icono de cada casa en el detalle del personaje.
+- [x] Mostrar icono de cada casa en el detalle del personaje.
 - [x] Maquetar con algún sistema de `grid`.
 - [ ] Adaptar a dispositivos pequeños.
 
