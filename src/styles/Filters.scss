@@ -2,34 +2,49 @@
 @import 'core/mixins';
 
 .filter {
-  margin: 5px 5px 40px;
-  padding-bottom: 25px;
   border-bottom: 1px dashed $color-card;
+  padding-bottom: 25px;
+  margin: 5px 5px 40px;
+
+  @include tablet {
+    border: none;
+    padding-bottom: 0;
+    margin-right: 25px;
+  }
 
   &__form {
+    font-size: 1.4em;
     display: flex;
     flex-direction: column;
-    font-size: 1.4em;
   }
 
   &__label {
     color: $color-card;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
   }
 
   &__input,
   &__select {
     font-size: inherit;
-    display: flex;
-    height: 35px;
-    color: $color-card;
-    border: 1px solid $color-card;
     background-color: $color-dark;
-    margin-bottom: 20px;
+    color: $color-card;
+    display: flex;
     width: 100%;
+    height: 30px;
+    border: 1px solid $color-card;
     border-radius: 0;
+    margin-bottom: 20px;
+
+    @include tablet {
+      width: 200px;
+    }
 
     &--checkbox {
+      width: auto;
+      height: auto;
+      background-color: transparent;
       margin-bottom: 0;
       margin-right: 10px;
     }

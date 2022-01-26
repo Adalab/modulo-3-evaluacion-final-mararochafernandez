@@ -2,9 +2,11 @@ import '../styles/App.scss';
 import { useEffect, useState } from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import getDataFromApi from '../services/api';
+import Header from './Header';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
 import CharacterDetail from './CharacterDetail';
+import Footer from './Footer';
 //import ls from '../services/localstorage';
 //import PropTypes from 'prop-types';
 
@@ -17,7 +19,6 @@ function App() {
   const [name, setName] = useState('');
   const [house, setHouse] = useState('gryffindor');
   const [gender, setGender] = useState('all');
-  console.log(house);
 
   // api
 
@@ -30,7 +31,6 @@ function App() {
   // event handlers
 
   const handleInput = (data) => {
-    console.log(data.value);
     if (data.key === 'name') {
       setName(data.value);
     } else if (data.key === 'house') {
@@ -74,7 +74,6 @@ function App() {
   const getRouteCharacter = () => {
     if (routeData !== null) {
       const routeHouse = routeData.params.house;
-      console.log(routeHouse);
       if (routeHouse !== house) {
         setHouse(routeHouse);
       } else {
@@ -84,33 +83,38 @@ function App() {
     }
   };
 
-  console.log(characters);
   return (
     // HTML ✨
 
     <div className="page">
-      <Switch>
-        <Route path="/character/:house/:id">
-          <CharacterDetail
-            character={getRouteCharacter()}
-            translate={translate}
-          />
-        </Route>
+      <Header title="Harry Potter" />
 
-        <Route path="/">
-          <Filters
-            name={name}
-            house={house}
-            gender={gender}
-            handleInput={handleInput}
-          />
+      <main className="main">
+        <Switch>
+          <Route path="/character/:house/:id">
+            <CharacterDetail
+              character={getRouteCharacter()}
+              translate={translate}
+            />
+          </Route>
 
-          <CharacterList
-            characters={filteredCharacters}
-            translate={translate}
-          />
-        </Route>
-      </Switch>
+          <Route path="/">
+            <Filters
+              name={name}
+              house={house}
+              gender={gender}
+              handleInput={handleInput}
+            />
+
+            <CharacterList
+              characters={filteredCharacters}
+              translate={translate}
+            />
+          </Route>
+        </Switch>
+      </main>
+
+      <Footer />
     </div>
   );
 }

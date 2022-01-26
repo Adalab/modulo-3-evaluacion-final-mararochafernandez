@@ -52,7 +52,7 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 - [x] Mostrar icono de cada casa en el detalle del personaje.
 - [x] Maquetar con algún sistema de `grid`.
-- [ ] Adaptar a dispositivos pequeños.
+- [x] Adaptar a dispositivos pequeños.
 
 ## 8. Bonus: URL compartible
 
@@ -71,6 +71,8 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 - [ ] Volver al listado inicial.
 
+---
+
 ## Otras mejoras
 
 - [x] Cambiar favicon.
@@ -78,6 +80,7 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 - [ ] Crear componente para cada filtro.
 - [ ] Filtrar por especie.
 - [ ] Guardar información del formulario en almacenamiento local.
+- [ ] Refactorizar.
 
 ---
 

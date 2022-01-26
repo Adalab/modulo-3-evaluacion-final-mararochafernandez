@@ -3,24 +3,32 @@
 
 .detail {
   font-family: $font-second;
-  margin: 5px auto;
+  color: $color-dark;
+  background-color: $color-card;
   display: flex;
   flex-direction: column;
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 5px;
+
+  @include tablet {
+    width: 380px;
+  }
 
   &__button {
     font-family: $font-second;
-    font-size: 2em;
-    background-color: $color-dark;
-    border: none;
+    font-size: 1.6em;
     color: $color-card;
+    background-color: $color-medium;
+    border: none;
+    border-radius: 8px;
     padding: 10px 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
     width: fit-content;
     cursor: pointer;
 
     &:hover {
       text-decoration: underline;
+      background-color: $color-dark;
     }
   }
 
@@ -28,43 +36,72 @@
     margin-right: 10px;
   }
 
+  &__image-container {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    padding-bottom: 100%;
+    margin-top: 5px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
   &__title {
-    font-size: 5em;
-    font-weight: bold;
-    margin: 10px 0;
+    font-size: 3.2em;
+    line-height: 1.2em;
+    width: 100%;
+    margin: 10px 5px 10px;
     text-transform: uppercase;
+    word-spacing: 100vw;
+
+    @include tablet {
+      font-size: 4.2em;
+    }
   }
 
   &__subtitle {
-    font-size: 4em;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 2.8em;
+    line-height: 1.2em;
     display: flex;
     align-items: center;
-    padding-bottom: 10px;
-    color: #999;
-    border-bottom: 1px solid $color-card;
+    color: $color-medium;
+    border-top: 1px dotted $color-medium;
+    border-bottom: 1px dotted $color-medium;
+    padding: 10px 0;
+    margin-bottom: 10px;
     text-transform: uppercase;
+
+    @include tablet {
+      font-size: 3.8em;
+    }
   }
 
   &__shield {
     width: 40px;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
-  &__image {
-    width: 250px;
-    border-radius: 8px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+  &__content {
+    display: flex;
+    margin: 5px;
+    font-size: 1.4em;
+    line-height: 1.6em;
+    color: $color-text;
+
+    @include tablet {
+      font-size: 1.6em;
+    }
   }
 
-  &__text,
-  &__list,
-  &__item,
-  &__message {
-    font-size: 1.6em;
-    margin-bottom: 10px;
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__list {
+    margin-bottom: 5px;
   }
 
   &__item {
@@ -72,6 +109,8 @@
   }
 
   &__message {
+    font-size: 1.6em;
+    line-height: 1.6em;
     margin: 0 auto;
     margin-top: 40px;
   }

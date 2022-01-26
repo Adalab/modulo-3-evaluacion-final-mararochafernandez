@@ -26,6 +26,7 @@ const Filters = (props) => {
           value={props.name}
           onChange={handleChange}
         />
+
         <label className="filter__label" htmlFor="house">
           Casa:
         </label>
@@ -43,6 +44,7 @@ const Filters = (props) => {
           <option value="ravenclaw">Ravenclaw</option>
           <option value="hufflepuff">Hufflepuff</option>
         </select>
+
         <label className="filter__label" htmlFor="gender">
           Género:
         </label>
@@ -59,30 +61,11 @@ const Filters = (props) => {
           <option value="female">Mujer</option>
           <option value="male">Hombre</option>
         </select>
+
         {/*
-        <label className="filter__label">Género:</label>
-        <label className="filter__label">
-          <input
-            className="filter__input filter__input--checkbox"
-            type="checkbox"
-            name="female"
-            id="female"
-            value={props.name}
-            onChange={handleChange}
-          />
-          Mujer
-        </label>
-        <label className="filter__label">
-          <input
-            className="filter__input filter__input--checkbox"
-            type="checkbox"
-            name="male"
-            id="male"
-            value={props.name}
-            onChange={handleChange}
-          />
-          Hombre
-        </label>
+        <button className="detail__button" onClick={handleButton}>
+          <i className="detail__icon fas fa-long-arrow-alt-left"></i>Volver
+        </button>
         */}
       </form>
     </section>

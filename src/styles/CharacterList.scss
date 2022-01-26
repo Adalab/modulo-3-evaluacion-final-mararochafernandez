@@ -4,21 +4,24 @@
 .character {
   &__list {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 
     @include tablet {
-      width: 680px;
+      width: 100%;
+      height: min-content;
     }
   }
 
-  //width: 170px;
   &__item {
     font-family: $font-second;
     background-color: $color-card;
-    border-radius: 4px;
-    margin: 5px;
-    padding: 5px;
     width: calc(50vw - 30px);
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+
+    @include tablet {
+      width: min-content;
+    }
   }
 }

@@ -1,18 +1,41 @@
 import '../styles/CharacterDetail.scss';
-import Gryffindor from '../images/gryffindor.svg';
-import Slytherin from '../images/slytherin.svg';
-import Ravenclaw from '../images/ravenclaw.svg';
-import Hufflepuff from '../images/hufflepuff.svg';
+import defaultImage from '../images/default-image.jpg';
+import gryffindorImage from '../images/gryffindor.svg';
+import slytherinImage from '../images/slytherin.svg';
+import ravenclawImage from '../images/ravenclaw.svg';
+import hufflepuffImage from '../images/hufflepuff.svg';
 
 const CharacterDetail = (props) => {
   const handleButton = () => {
     window.history.back();
   };
 
+  const renderImage = () => {
+    if (props.character !== undefined) {
+      return props.character.image === ''
+        ? defaultImage
+        : props.character.image;
+    }
+  };
+
+  const renderShield = (house) => {
+    let shield = '';
+    if (house === 'Gryffindor') {
+      shield = gryffindorImage;
+    } else if (house === 'Slytherin') {
+      shield = slytherinImage;
+    } else if (house === 'Ravenclaw') {
+      shield = ravenclawImage;
+    } else if (house === 'Hufflepuff') {
+      shield = hufflepuffImage;
+    }
+    return <img className="detail__shield" src={shield} alt={house} />;
+  };
+
   const renderAlternateNames = () => {
     return props.character.alternate_names.map((name, index) => (
       <li key={index} className="detail__item">
-        {name}
+        - {name}
       </li>
     ));
   };
@@ -21,23 +44,17 @@ const CharacterDetail = (props) => {
     return <p className="detail__message">El personaje no existe.</p>;
   };
 
-  const renderShield = (house) => {
-    let shield = '';
-    if (house === 'Gryffindor') {
-      shield = Gryffindor;
-    } else if (house === 'Slytherin') {
-      shield = Slytherin;
-    } else if (house === 'Ravenclaw') {
-      shield = Ravenclaw;
-    } else if (house === 'Hufflepuff') {
-      shield = Hufflepuff;
-    }
-    return <img className="detail__shield" src={shield} alt={house} />;
-  };
-
   const renderCharacterDetail = () => {
     return (
       <>
+        <div className="detail__image-container">
+          <img
+            className="detail__image"
+            src={renderImage()}
+            alt={props.character.name}
+          />
+        </div>
+
         <h1 className="detail__title">{props.character.name}</h1>
 
         <h2 className="detail__subtitle">
@@ -45,38 +62,41 @@ const CharacterDetail = (props) => {
           {props.character.house}
         </h2>
 
-        {props.character.image !== '' ? (
-          <img
-            className="detail__image"
-            src={props.character.image}
-            alt={props.character.name}
-          />
-        ) : null}
+        <section className="detail__content">
+          <div className="detail__wrapper">
+            <p className="detail__text">
+              {props.character.species
+                ? `Especie: ${props.translate(props.character.species)}`
+                : null}
+            </p>
 
-        <p className="detail__text">
-          {props.character.species
-            ? `Especie: ${props.translate(props.character.species)}`
-            : null}
-        </p>
+            <p className="detail__text">
+              {props.character.alive
+                ? `Está vivo? ${props.character.alive ? 'Sí' : 'No'}`
+                : null}
+            </p>
 
-        <p className="detail__text">
-          {props.character.gender
-            ? `Género: ${props.translate(props.character.gender)}`
-            : null}
-        </p>
+            <p className="detail__text">
+              {props.character.gender
+                ? `Género: ${props.translate(props.character.gender)}`
+                : null}
+            </p>
+          </div>
 
-        <p className="detail__text">
-          {props.character.alive
-            ? `Está vivo? ${props.character.alive ? 'Sí' : 'No'}`
-            : null}
-        </p>
+          <div className="detail__wrapper">
+            <p className="detail__text">
+              {props.character.alternate_names.length > 0
+                ? 'Nombres alternativos:'
+                : null}
+            </p>
 
-        <ul className="detail__list">
-          {props.character.alternate_names &&
-          props.character.alternate_names.length > 0
-            ? renderAlternateNames()
-            : null}
-        </ul>
+            <ul className="detail__list">
+              {props.character.alternate_names.length > 0
+                ? renderAlternateNames()
+                : null}
+            </ul>
+          </div>
+        </section>
       </>
     );
   };

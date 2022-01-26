@@ -1,0 +1,21 @@
+@import 'core/variables';
+@import 'core/mixins';
+
+.header {
+  background: url('../images/border-header.png') bottom repeat-x;
+  color: $color-dark;
+  padding-bottom: 10px;
+
+  &__title {
+    background-color: $color-card;
+    font-family: $font-first;
+    font-size: 7em;
+    text-align: center;
+    padding: 40px 10px 30px 0;
+
+    @include tablet {
+      font-size: 14em;
+      padding: 40px 10px 30px 0;
+    }
+  }
+}

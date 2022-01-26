@@ -1,0 +1,63 @@
+@import 'core/variables';
+@import 'core/mixins';
+
+.footer {
+  font-family: $font-second;
+  font-size: 1.8em;
+  background: url('../images/border-footer.png') top repeat-x;
+  color: $color-medium;
+  padding-top: 10px;
+
+  &__container {
+    background-color: $color-card;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+
+    @include tablet {
+      width: 730px;
+      margin: 0 auto;
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    @include desktop {
+      width: 900px;
+    }
+  }
+
+  &__copy {
+    text-transform: uppercase;
+    padding-bottom: 12px;
+    @include tablet {
+      padding-top: 5px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    padding: 4px 8px;
+  }
+
+  &__link {
+    color: $color-medium;
+
+    &:hover {
+      color: $color-dark;
+    }
+  }
+}

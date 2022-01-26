@@ -7,12 +7,12 @@
   }
 
   &__image-container {
+    width: calc(50vw - 40px);
+    height: 0;
     overflow: hidden;
     border-radius: 8px;
-    margin-bottom: 10px;
-    height: 0;
-    width: calc(50vw - 40px);
     padding-bottom: 100%;
+    margin-bottom: 10px;
 
     @include tablet {
       width: 150px;
@@ -22,7 +22,6 @@
 
   &__image {
     width: 100%;
-    //object-fit: fill;
 
     @include tablet {
       width: 150px;
@@ -30,16 +29,16 @@
   }
 
   &__title {
-    width: 100%;
-    font-size: 1.8em;
+    font-size: 1.6em;
     line-height: 1.2em;
-    margin: 5px;
-    word-spacing: 100vw;
-    text-transform: uppercase;
     color: $color-dark;
+    width: 100%;
+    margin: 5px;
+    text-transform: uppercase;
+    word-spacing: 100vw;
 
     @include tablet {
-      font-size: 1.8em;
+      font-size: 2em;
     }
   }
 
@@ -57,6 +56,7 @@
 .message {
   font-size: 1.6em;
   margin: 0 auto;
+  margin-bottom: 20px;
 
   @include tablet {
     margin-top: 40px;

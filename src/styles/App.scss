@@ -2,17 +2,28 @@
 @import 'core/mixins';
 @import 'core/reset';
 
-.page {
+body {
+  background: url('../images/stars.jpg') no-repeat fixed center;
+  background-size: cover;
+  color: $color-card;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+.main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  min-height: calc(100vh - 350px);
   margin: 20px;
 
   @include tablet {
     flex-direction: row;
+    width: 740px;
+    min-height: calc(100vh - 375px);
+    margin: 20px auto;
   }
 
   @include desktop {
-    width: 900px;
+    width: 910px;
   }
 }
