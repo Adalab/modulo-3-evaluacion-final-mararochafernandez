@@ -61,7 +61,7 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 ## 9. Bonus: ordenación
 
-- [x] Ordenar listado de persponajes alfabéticamente.
+- [x] Ordenar listado de personajes alfabéticamente.
 
 ## 10. Bonus: más filtros
 
@@ -70,6 +70,14 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 ## 11. Bonus: botón reset
 
 - [ ] Volver al listado inicial.
+
+## Otras mejoras
+
+- [x] Cambiar favicon.
+- [x] Maquetar estilos CSS.
+- [ ] Crear componente para cada filtro.
+- [ ] Filtrar por especie.
+- [ ] Guardar información del formulario en almacenamiento local.
 
 ---
 

@@ -15,7 +15,7 @@ function App() {
 
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState('');
-  const [house, setHouse] = useState('gryffindor');
+  const [house, setHouse] = useState('Gryffindor');
   const [gender, setGender] = useState('all');
 
   // api
@@ -45,7 +45,7 @@ function App() {
     .filter((character) =>
       character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase())
     )
-    .filter((character) => character.house.toLocaleLowerCase() === house)
+    .filter((character) => character.house === house)
     .filter((character) =>
       gender === 'all' ? true : character.gender === gender
     )

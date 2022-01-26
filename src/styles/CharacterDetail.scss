@@ -11,22 +11,32 @@
   }
 
   &__image {
-    max-width: 200px;
+    width: 250px;
     border-radius: 8px;
     margin-top: 10px;
     margin-bottom: 20px;
   }
 
   &__title {
-    font-size: 3em;
+    font-size: 4em;
     font-weight: bold;
     margin: 10px 0;
   }
 
   &__subtitle {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    color: #666;
+    border-bottom: 1px solid #333;
+  }
+
+  &__shield {
+    width: 40px;
+    margin-right: 10px;
   }
 
   &__text,

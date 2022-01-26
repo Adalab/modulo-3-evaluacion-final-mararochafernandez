@@ -1,4 +1,8 @@
 import '../styles/CharacterDetail.scss';
+import Gyffindor from '../images/gryffindor.svg';
+import Slytherin from '../images/slytherin.svg';
+import Ravenclaw from '../images/ravenclaw.svg';
+import Hufflepuff from '../images/hufflepuff.svg';
 
 const CharacterDetail = (props) => {
   const handleButton = () => {
@@ -17,12 +21,29 @@ const CharacterDetail = (props) => {
     return <p className="detail__message">El personaje no existe.</p>;
   };
 
+  const renderShield = (house) => {
+    let shield = '';
+    if (house === 'Gyffindor') {
+      shield = Gyffindor;
+    } else if (house === 'Slytherin') {
+      shield = Slytherin;
+    } else if (house === 'Ravenclaw') {
+      shield = Ravenclaw;
+    } else if (house === 'Hufflepuff') {
+      shield = Hufflepuff;
+    }
+    return <img className="detail__shield" src={shield} alt={house} />;
+  };
+
   const renderCharacterDetail = () => {
     return (
       <>
         <h1 className="detail__title">{props.character.name}</h1>
 
-        <h2 className="detail__subtitle">{props.character.house}</h2>
+        <h2 className="detail__subtitle">
+          {renderShield(props.character.house)}
+          {props.character.house}
+        </h2>
 
         {props.character.image !== '' ? (
           <img

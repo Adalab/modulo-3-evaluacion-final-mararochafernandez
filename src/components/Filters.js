@@ -36,12 +36,10 @@ const Filters = (props) => {
           value={props.house}
           onChange={handleChange}
         >
-          <option defaultValue value="gryffindor">
-            Gryffindor
-          </option>
-          <option value="slytherin">Slytherin</option>
-          <option value="ravenclaw">Ravenclaw</option>
-          <option value="hufflepuff">Hufflepuff</option>
+          <option defaultValue>Gryffindor</option>
+          <option>Slytherin</option>
+          <option>Ravenclaw</option>
+          <option>Hufflepuff</option>
         </select>
         <label className="filter__label" htmlFor="gender">
           Género:
