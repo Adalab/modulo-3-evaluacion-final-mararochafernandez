@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.da4f2e97.css",
-    "main.js": "./static/js/main.a6f496ea.js",
+    "main.css": "./static/css/main.515514ff.css",
+    "main.js": "./static/js/main.66387b22.js",
     "static/media/stars.jpg": "./static/media/stars.e5123e2ac447b8bc6199.jpg",
     "static/media/default-image.jpg": "./static/media/default-image.12080be958d5a879cd87.jpg",
     "static/media/harry-potter.ttf": "./static/media/harry-potter.a65869c0c1a4b3d4fcfc.ttf",
@@ -10,11 +10,11 @@
     "static/media/ravenclaw.svg": "./static/media/ravenclaw.fbb89db73ef7b637818c09d7d830db0e.svg",
     "static/media/gryffindor.svg": "./static/media/gryffindor.d959739bf77f38649d72cf8b1a0815c7.svg",
     "index.html": "./index.html",
-    "main.da4f2e97.css.map": "./static/css/main.da4f2e97.css.map",
-    "main.a6f496ea.js.map": "./static/js/main.a6f496ea.js.map"
+    "main.515514ff.css.map": "./static/css/main.515514ff.css.map",
+    "main.66387b22.js.map": "./static/js/main.66387b22.js.map"
   },
   "entrypoints": [
-    "static/css/main.da4f2e97.css",
-    "static/js/main.a6f496ea.js"
+    "static/css/main.515514ff.css",
+    "static/js/main.66387b22.js"
   ]
 }
