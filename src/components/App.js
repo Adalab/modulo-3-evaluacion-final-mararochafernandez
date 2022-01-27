@@ -74,22 +74,6 @@ function App() {
     .filter((character) => (photo ? character.image !== '' : true))
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  const translate = (text) => {
-    if (text === 'female') {
-      return 'mujer';
-    } else if (text === 'male') {
-      return 'hombre';
-    } else if (text === 'human') {
-      return 'humano';
-    } else if (text === 'half-giant') {
-      return 'medio gigante';
-    } else if (text === 'werewolf') {
-      return 'hombre lobo';
-    } else if (text === 'ghost') {
-      return 'fantasma';
-    }
-  };
-
   // router
 
   const routeData = useRouteMatch('/character/:house/:id');
@@ -115,10 +99,7 @@ function App() {
       <main className="main">
         <Switch>
           <Route path="/character/:house/:id">
-            <CharacterDetail
-              character={getRouteCharacter()}
-              translate={translate}
-            />
+            <CharacterDetail character={getRouteCharacter()} />
           </Route>
 
           <Route path="/">
@@ -131,10 +112,7 @@ function App() {
               handleReset={handleReset}
             />
 
-            <CharacterList
-              characters={filteredCharacters}
-              translate={translate}
-            />
+            <CharacterList characters={filteredCharacters} />
           </Route>
         </Switch>
       </main>

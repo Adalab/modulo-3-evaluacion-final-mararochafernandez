@@ -5,7 +5,7 @@ const CharacterList = (props) => {
   const renderCharacterList = () =>
     props.characters.map((character) => (
       <li key={character.id} className="character__item">
-        <CharacterCard character={character} translate={props.translate} />
+        <CharacterCard character={character} />
       </li>
     ));
 

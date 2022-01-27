@@ -1,5 +1,6 @@
 import '../styles/CharacterDetail.scss';
 import { Link } from 'react-router-dom';
+import translate from '../services/translate';
 import defaultImage from '../images/default-image.jpg';
 import gryffindorImage from '../images/gryffindor.svg';
 import slytherinImage from '../images/slytherin.svg';
@@ -63,7 +64,7 @@ const CharacterDetail = (props) => {
           <div className="detail__wrapper">
             <p className="detail__text">
               {props.character.species
-                ? `Especie: ${props.translate(props.character.species)}`
+                ? `Especie: ${translate(props.character.species)}`
                 : null}
             </p>
 
@@ -75,7 +76,7 @@ const CharacterDetail = (props) => {
 
             <p className="detail__text">
               {props.character.gender
-                ? `Género: ${props.translate(props.character.gender)}`
+                ? `Género: ${translate(props.character.gender)}`
                 : null}
             </p>
           </div>

@@ -1,5 +1,6 @@
 import '../styles/CharacterCard.scss';
 import { Link } from 'react-router-dom';
+import translate from '../services/translate';
 import defaultImage from '../images/default-image.jpg';
 
 const CharacterCard = (props) => {
@@ -22,9 +23,7 @@ const CharacterCard = (props) => {
         />
       </div>
       <p className="character__title">{props.character.name}</p>
-      <p className="character__text">
-        {props.translate(props.character.species)}
-      </p>
+      <p className="character__text">{translate(props.character.species)}</p>
     </Link>
   );
 };
