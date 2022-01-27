@@ -6,6 +6,12 @@ Módulo 3 - React
 
 Desarrollar una página web con React con un listado de personajes de Harry Potter, que permita filtrar por el nombre del personaje y la casa a la que pertenece.
 
+---
+
+![Harry Potter](./react-harry-potter.jpg)
+
+---
+
 ## 0. Preparación
 
 - [x] Clonar repositorio
