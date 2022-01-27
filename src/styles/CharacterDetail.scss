@@ -10,6 +10,8 @@
   border-radius: 4px;
   margin: 0 auto;
   padding: 5px;
+  width: 100%;
+  height: fit-content;
 
   @include tablet {
     width: 380px;
@@ -100,7 +102,6 @@
   &__message {
     font-size: 1.6em;
     line-height: 1.6em;
-    margin: 0 auto;
-    margin-top: 40px;
+    margin: 40px auto 80px;
   }
 }

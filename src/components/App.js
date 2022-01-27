@@ -7,8 +7,7 @@ import CharacterList from './CharacterList';
 import Filters from './Filters';
 import CharacterDetail from './CharacterDetail';
 import Footer from './Footer';
-//import ls from '../services/localstorage';
-//import PropTypes from 'prop-types';
+import ls from '../services/localstorage';
 
 function App() {
   /* Let's do magic! 🦄🦄🦄 */
@@ -16,10 +15,12 @@ function App() {
   // state
 
   const [characters, setCharacters] = useState([]);
-  const [name, setName] = useState('');
-  const [house, setHouse] = useState('gryffindor');
-  const [gender, setGender] = useState('all');
-  const [photo, setPhoto] = useState(false);
+  const [name, setName] = useState(ls.get('filter', {}).name || '');
+  const [house, setHouse] = useState(
+    ls.get('filter', {}).house || 'gryffindor'
+  );
+  const [gender, setGender] = useState(ls.get('filter', {}).gender || 'all');
+  const [photo, setPhoto] = useState(ls.get('filter', {}).photo || false);
 
   // api
 
@@ -28,6 +29,17 @@ function App() {
       setCharacters(dataFromApi);
     });
   }, [house]);
+
+  // local storage
+
+  useEffect(() => {
+    ls.set('filter', {
+      name: name,
+      house: house,
+      gender: gender,
+      photo: photo,
+    });
+  }, [name, house, gender, photo]);
 
   // event handlers
 

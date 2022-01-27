@@ -75,9 +75,9 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 - [x] Cambiar favicon.
 - [x] Maquetar estilos CSS.
-- [ ] Crear componente para cada filtro.
 - [x] Filtrar por personajes con imagen.
-- [ ] Guardar información del formulario en almacenamiento local.
+- [x] Guardar información del formulario en almacenamiento local.
+- [ ] Crear componente para cada filtro.
 - [ ] Refactorizar.
 
 ---
