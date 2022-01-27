@@ -9,7 +9,12 @@ const Filters = (props) => {
     props.handleInput({
       key: event.currentTarget.id,
       value: event.currentTarget.value,
+      checked: event.currentTarget.checked,
     });
+  };
+
+  const handleButton = () => {
+    props.handleReset();
   };
 
   return (
@@ -62,11 +67,26 @@ const Filters = (props) => {
           <option value="male">Hombre</option>
         </select>
 
-        {/*
-        <button className="detail__button" onClick={handleButton}>
-          <i className="detail__icon fas fa-long-arrow-alt-left"></i>Volver
+        <label className="filter__label" htmlFor="photo">
+          <input
+            className="filter__input filter__input--checkbox"
+            type="checkbox"
+            name="photo"
+            id="photo"
+            value={props.photo}
+            checked={props.photo}
+            onChange={handleChange}
+          />
+          Foto
+        </label>
+
+        <button
+          className="filter__button"
+          title="Reiniciar"
+          onClick={handleButton}
+        >
+          <i className="filter__icon fas fa-redo"></i>Reiniciar
         </button>
-        */}
       </form>
     </section>
   );

@@ -19,6 +19,7 @@ function App() {
   const [name, setName] = useState('');
   const [house, setHouse] = useState('gryffindor');
   const [gender, setGender] = useState('all');
+  const [photo, setPhoto] = useState(false);
 
   // api
 
@@ -37,7 +38,16 @@ function App() {
       setHouse(data.value);
     } else if (data.key === 'gender') {
       setGender(data.value);
+    } else if (data.key === 'photo') {
+      setPhoto(data.checked);
     }
+  };
+
+  const handleReset = () => {
+    setName('');
+    setHouse('gryffindor');
+    setGender('all');
+    setPhoto(false);
   };
 
   // render helpers
@@ -49,6 +59,7 @@ function App() {
     .filter((character) =>
       gender === 'all' ? true : character.gender === gender
     )
+    .filter((character) => (photo ? character.image !== '' : true))
     .sort((a, b) => a.name.localeCompare(b.name));
 
   const translate = (text) => {
@@ -103,7 +114,9 @@ function App() {
               name={name}
               house={house}
               gender={gender}
+              photo={photo}
               handleInput={handleInput}
+              handleReset={handleReset}
             />
 
             <CharacterList

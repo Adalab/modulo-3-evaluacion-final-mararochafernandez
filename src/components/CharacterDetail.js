@@ -1,4 +1,5 @@
 import '../styles/CharacterDetail.scss';
+import { Link } from 'react-router-dom';
 import defaultImage from '../images/default-image.jpg';
 import gryffindorImage from '../images/gryffindor.svg';
 import slytherinImage from '../images/slytherin.svg';
@@ -6,10 +7,6 @@ import ravenclawImage from '../images/ravenclaw.svg';
 import hufflepuffImage from '../images/hufflepuff.svg';
 
 const CharacterDetail = (props) => {
-  const handleButton = () => {
-    window.history.back();
-  };
-
   const renderImage = () => {
     if (props.character !== undefined) {
       return props.character.image === ''
@@ -103,9 +100,9 @@ const CharacterDetail = (props) => {
 
   return (
     <section className="detail">
-      <button className="detail__button" onClick={handleButton}>
+      <Link to="/" className="detail__button" title="Volver">
         <i className="detail__icon fas fa-long-arrow-alt-left"></i>Volver
-      </button>
+      </Link>
 
       {props.character === undefined
         ? renderMessage()

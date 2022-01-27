@@ -4,12 +4,12 @@
 .footer {
   font-family: $font-second;
   font-size: 1.8em;
-  background: url('../images/border-footer.png') top repeat-x;
-  color: $color-medium;
+  background: url('../images/border-top.png') top repeat-x;
+  color: $color-text;
   padding-top: 10px;
 
   &__container {
-    background-color: $color-card;
+    background-color: $color-main;
   }
 
   &__wrapper {
@@ -50,11 +50,11 @@
   }
 
   &__item {
-    padding: 4px 8px;
+    padding: 4px 6px;
   }
 
   &__link {
-    color: $color-medium;
+    color: $color-text;
 
     &:hover {
       color: $color-dark;

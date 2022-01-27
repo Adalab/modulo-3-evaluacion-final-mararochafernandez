@@ -46,10 +46,13 @@
     font-size: 1.4em;
     line-height: 1.2em;
     margin: 5px;
+    text-transform: capitalize;
 
+    /* 
     &:first-letter {
-      text-transform: uppercase;
+      text-transform: capitalize;
     }
+    */
   }
 }
 

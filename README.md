@@ -69,7 +69,7 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 
 ## 11. Bonus: botón reset
 
-- [ ] Volver al listado inicial.
+- [x] Volver al listado inicial.
 
 ---
 
@@ -78,7 +78,7 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 - [x] Cambiar favicon.
 - [x] Maquetar estilos CSS.
 - [ ] Crear componente para cada filtro.
-- [ ] Filtrar por especie.
+- [x] Filtrar por personajes con imagen.
 - [ ] Guardar información del formulario en almacenamiento local.
 - [ ] Refactorizar.
 

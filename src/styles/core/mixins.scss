@@ -9,3 +9,26 @@
     @content;
   }
 }
+
+@mixin button {
+  font-family: $font-second;
+  font-size: 1.6em;
+  color: $color-text;
+  background-color: $color-main;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  width: fit-content;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    color: $color-dark;
+  }
+}
+
+@mixin button-icon {
+  margin-right: 10px;
+  font-size: 1.2em;
+}

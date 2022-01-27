@@ -16,33 +16,22 @@
   }
 
   &__button {
-    font-family: $font-second;
-    font-size: 1.6em;
-    color: $color-card;
-    background-color: $color-medium;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    width: fit-content;
-    cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-      background-color: $color-dark;
-    }
+    @include button;
   }
 
-  &__icon {
-    margin-right: 10px;
+  &__button &__icon {
+    @include button-icon;
   }
 
   &__image-container {
-    width: 100%;
+    width: 75%;
     height: 0;
     overflow: hidden;
-    border-radius: 8px;
-    padding-bottom: 100%;
+    border-radius: 50%;
+    padding-bottom: 75%;
     margin-top: 5px;
+    margin-bottom: 15px;
+    align-self: center;
   }
 
   &__image {
@@ -50,7 +39,7 @@
   }
 
   &__title {
-    font-size: 3.2em;
+    font-size: 3.6em;
     line-height: 1.2em;
     width: 100%;
     margin: 10px 5px 10px;
@@ -58,7 +47,7 @@
     word-spacing: 100vw;
 
     @include tablet {
-      font-size: 4.2em;
+      font-size: 5em;
     }
   }
 

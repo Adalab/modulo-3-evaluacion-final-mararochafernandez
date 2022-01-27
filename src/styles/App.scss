@@ -3,11 +3,15 @@
 @import 'core/reset';
 
 body {
-  background: url('../images/stars.jpg') no-repeat fixed center;
-  background-size: cover;
+  background-color: $color-dark;
   color: $color-card;
   font-family: sans-serif;
   font-size: 10px;
+
+  @include tablet {
+    background: url('../images/stars.jpg') no-repeat fixed center;
+    background-size: cover;
+  }
 }
 
 .main {
