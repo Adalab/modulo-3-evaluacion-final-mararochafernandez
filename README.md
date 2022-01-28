@@ -6,6 +6,15 @@ Módulo 3 - React
 
 Desarrollar una página web con React con un listado de personajes de Harry Potter, que permita filtrar por el nombre del personaje y la casa a la que pertenece.
 
+## Características técnicas
+
+- Petición Fetch a una API.
+- Funcionalidades propias de React: componentes, Lifting, Router, Hooks de estado y efecto.
+- Métodos funcionales de array de JavaScript: `map`, `filter`, `find`, `sort`.
+- Gestión de Local Storage del navegador.
+- Control de versiones con Git.
+- Maquetación responsive con CSS Flexbox, Sass y BEM.
+
 ---
 
 ![Harry Potter](./react-harry-potter.jpg)
@@ -82,8 +91,10 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 - [x] Cambiar favicon.
 - [x] Maquetar estilos CSS.
 - [x] Filtrar por personajes con imagen.
+- [x] Filtrar por estudiante de Hogwarts.
 - [x] Guardar información del formulario en almacenamiento local.
-- [ ] Crear componente para cada filtro.
+- [ ] Crear un componente para cada filtro.
+- [ ] Uso de default props y prop types.
 - [ ] Refactorizar.
 
 ---

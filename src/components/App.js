@@ -20,7 +20,10 @@ function App() {
     ls.get('filter', {}).house || 'gryffindor'
   );
   const [gender, setGender] = useState(ls.get('filter', {}).gender || 'all');
+  const [species, setSpecies] = useState(ls.get('filter', {}).species || 'all');
+
   const [photo, setPhoto] = useState(ls.get('filter', {}).photo || false);
+  const [student, setStudent] = useState(ls.get('filter', {}).student || false);
 
   // api
 
@@ -37,9 +40,11 @@ function App() {
       name: name,
       house: house,
       gender: gender,
+      species: species,
       photo: photo,
+      student: student,
     });
-  }, [name, house, gender, photo]);
+  }, [name, house, gender, species, photo, student]);
 
   // event handlers
 
@@ -50,8 +55,12 @@ function App() {
       setHouse(data.value);
     } else if (data.key === 'gender') {
       setGender(data.value);
+    } else if (data.key === 'species') {
+      setSpecies(data.value);
     } else if (data.key === 'photo') {
       setPhoto(data.checked);
+    } else if (data.key === 'student') {
+      setStudent(data.checked);
     }
   };
 
@@ -59,7 +68,9 @@ function App() {
     setName('');
     setHouse('gryffindor');
     setGender('all');
+    setSpecies('all');
     setPhoto(false);
+    setStudent(false);
   };
 
   // render helpers
@@ -71,8 +82,18 @@ function App() {
     .filter((character) =>
       gender === 'all' ? true : character.gender === gender
     )
+    .filter((character) =>
+      species === 'all' ? true : character.species === species
+    )
     .filter((character) => (photo ? character.image !== '' : true))
+    .filter((character) => (student ? character.student : true))
     .sort((a, b) => a.name.localeCompare(b.name));
+
+  const getUniqueSpecies = () => {
+    const allSpecies = characters.map((character) => character.species);
+    const uniqueSpecies = new Set(allSpecies);
+    return [...uniqueSpecies];
+  };
 
   // router
 
@@ -107,7 +128,10 @@ function App() {
               name={name}
               house={house}
               gender={gender}
+              species={species}
               photo={photo}
+              student={student}
+              uniqueSpecies={getUniqueSpecies()}
               handleInput={handleInput}
               handleReset={handleReset}
             />

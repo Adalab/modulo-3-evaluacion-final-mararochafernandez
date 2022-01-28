@@ -12,6 +12,7 @@ const getDataFromApi = (house) => {
           alive: character.alive,
           gender: character.gender,
           alternate_names: character.alternate_names,
+          student: character.hogwartsStudent,
         };
       })
     );

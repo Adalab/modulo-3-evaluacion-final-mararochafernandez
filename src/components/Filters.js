@@ -1,4 +1,5 @@
 import '../styles/Filters.scss';
+import translate from '../services/translate';
 
 const Filters = (props) => {
   const handleForm = (event) => {
@@ -15,6 +16,14 @@ const Filters = (props) => {
 
   const handleButton = () => {
     props.handleReset();
+  };
+
+  const renderSpecies = () => {
+    return props.uniqueSpecies.map((species, index) => (
+      <option key={index} value={species}>
+        {translate(species)}
+      </option>
+    ));
   };
 
   return (
@@ -67,6 +76,22 @@ const Filters = (props) => {
           <option value="male">Hombre</option>
         </select>
 
+        <label className="filter__label" htmlFor="species">
+          Especie:
+        </label>
+        <select
+          className="filter__select"
+          name="species"
+          id="species"
+          value={props.species}
+          onChange={handleChange}
+        >
+          <option defaultValue value="all">
+            Todas
+          </option>
+          {renderSpecies()}
+        </select>
+
         <label className="filter__label" htmlFor="photo">
           <input
             className="filter__input filter__input--checkbox"
@@ -77,7 +102,20 @@ const Filters = (props) => {
             checked={props.photo}
             onChange={handleChange}
           />
-          Foto
+          Con foto
+        </label>
+
+        <label className="filter__label" htmlFor="student">
+          <input
+            className="filter__input filter__input--checkbox"
+            type="checkbox"
+            name="student"
+            id="student"
+            value={props.student}
+            checked={props.student}
+            onChange={handleChange}
+          />
+          Estudiante de Hogwarts
         </label>
 
         <button
