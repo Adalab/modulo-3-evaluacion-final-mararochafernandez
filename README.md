@@ -1,6 +1,6 @@
 Módulo 3 - React
 
-# Ejercicio de evaluación final
+# Evaluación final
 
 **URL del ejercicio: [Harry Potter](http://beta.adalab.es/modulo-3-evaluacion-final-mararochafernandez/)**
 
