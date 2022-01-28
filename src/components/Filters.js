@@ -20,7 +20,7 @@ const Filters = (props) => {
 
   const renderSpecies = () => {
     return props.uniqueSpecies.map((species, index) => (
-      <option key={index} value={species}>
+      <option key={index} value={species} className="filter__option">
         {translate(species)}
       </option>
     ));

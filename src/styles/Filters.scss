@@ -50,17 +50,11 @@
     }
   }
 
-  &__option {
-    &:first-letter {
-      text-transform: uppercase;
-    }
-  }
-
   &__input {
     padding: 5px;
   }
 
-  &__select {
+  &__select &__option {
     text-transform: capitalize;
   }
 

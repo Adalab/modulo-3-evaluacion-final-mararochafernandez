@@ -9,7 +9,7 @@ Desarrollar una página web con React con un listado de personajes de Harry Pott
 ## Características técnicas
 
 - Petición Fetch a una API.
-- Funcionalidades propias de React: componentes, Lifting, Router, Hooks de estado y efecto.
+- Funcionalidades propias de React como componentes, Lifting, Router, Hooks de estado y efecto.
 - Métodos funcionales de array de JavaScript: `map`, `filter`, `find`, `sort`.
 - Gestión de Local Storage del navegador.
 - Control de versiones con Git.
