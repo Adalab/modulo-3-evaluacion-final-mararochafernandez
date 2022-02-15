@@ -2,7 +2,7 @@ Módulo 3 - React
 
 # Evaluación final
 
-**URL del ejercicio: [Harry Potter](http://beta.adalab.es/modulo-3-evaluacion-final-mararochafernandez/)**
+**URL del ejercicio: [Harry Potter](https://mararochafernandez.github.io/modulo-3-evaluacion-final/)**
 
 Desarrollar una página web con React con un listado de personajes de Harry Potter, que permita filtrar por el nombre del personaje y la casa a la que pertenece.
 
